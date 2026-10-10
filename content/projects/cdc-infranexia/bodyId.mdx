@@ -6,15 +6,7 @@ Data dari sistem cuti pegawai sampai ke data warehouse lewat batch ETL harian, s
 
 Pipeline Change Data Capture berbasis log menggantikan batch harian. Perubahan dibaca dari log PostgreSQL, dibawa lewat Kafka, lalu ditulis ke Greenplum.
 
-<Flow
-  steps={[
-    "PostgreSQL",
-    "Debezium",
-    "Apache Kafka",
-    "JDBC Sink Connector",
-    "Greenplum",
-  ]}
-/>
+<Flow steps="PostgreSQL | Debezium | Apache Kafka | JDBC Sink Connector | Greenplum" />
 
 Greenplum 6 tidak punya upsert native dan schema auto-evolution, sehingga job merge dengan Python menangani hal yang tidak bisa dilakukan sink:
 

@@ -40,11 +40,14 @@ export function Hero({
       <div className="mx-auto grid w-full max-w-5xl items-center gap-12 px-5 sm:px-8 md:grid-cols-[1fr_auto]">
         <div>
           {status && (
-            <div className="mb-6">
+            <div data-reveal="up" className="mb-6">
               <Badge marker="dot">{status}</Badge>
             </div>
           )}
-          <p className="mb-3 text-sm font-medium tracking-widest text-accent uppercase">
+          <p
+            data-reveal="up"
+            className="mb-3 text-sm font-medium tracking-widest text-accent uppercase"
+          >
             {eyebrow} · {name}
           </p>
           <h1
@@ -53,8 +56,10 @@ export function Hero({
           >
             {headline}
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-fg-muted">{subheadline}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <p data-reveal="up" className="mt-6 max-w-xl text-lg text-fg-muted">
+            {subheadline}
+          </p>
+          <div data-reveal="up" className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href={primaryCta.href} size="lg">
               {primaryCta.label}
             </ButtonLink>

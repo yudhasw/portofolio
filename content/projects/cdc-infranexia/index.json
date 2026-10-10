@@ -1,5 +1,5 @@
 {
-  "published": false,
+  "published": true,
   "summary": {
     "en": "Log-based Change Data Capture pipeline from PostgreSQL to Greenplum. Median 14.6 s until a change is visible in Greenplum, versus a daily batch ETL; 15-second micro-batch, not direct streaming.",
     "id": "Pipeline Change Data Capture berbasis log dari PostgreSQL ke Greenplum. Median 14,6 dtk sampai perubahan terlihat di Greenplum, dibandingkan batch ETL harian; micro-batch 15 dtk, bukan streaming langsung."

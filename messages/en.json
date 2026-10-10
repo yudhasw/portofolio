@@ -24,7 +24,7 @@
     "toggle": "Toggle color theme"
   },
   "Language": {
-    "label": "Switch language to {language}",
+    "label": "{code}: switch language to {language}",
     "en": "English",
     "id": "Bahasa Indonesia"
   },

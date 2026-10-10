@@ -32,7 +32,7 @@ export function Education({
       <SectionHeading id="education" eyebrow={eyebrow} title={title} />
       <ul className="space-y-6">
         {items.map((item) => (
-          <li key={item.id}>
+          <li key={item.id} data-reveal="up">
             <p className="text-sm text-fg-muted">{item.period}</p>
             <h3 className="font-display text-xl font-bold">{item.degree}</h3>
             <p className="text-fg-muted">

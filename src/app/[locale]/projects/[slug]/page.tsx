@@ -137,7 +137,7 @@ export default async function ProjectPage({
         metrics={project.metrics.map((m) => ({
           label: pick(m.label, locale),
           value: pick(m.value, locale),
-          note: pick(m.note, locale) || undefined,
+          note: m.note.en || m.note.id ? pick(m.note, locale) : undefined,
         }))}
         body={<MDXRemote source={source} components={mdxComponents} />}
         galleryLabel={c("gallery")}

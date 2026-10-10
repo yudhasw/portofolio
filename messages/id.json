@@ -24,7 +24,7 @@
     "toggle": "Ganti tema warna"
   },
   "Language": {
-    "label": "Ganti bahasa ke {language}",
+    "label": "{code}: ganti bahasa ke {language}",
     "en": "English",
     "id": "Bahasa Indonesia"
   },

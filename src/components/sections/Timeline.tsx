@@ -17,7 +17,7 @@ export function TimelineItem({
   tags,
 }: TimelineItemData) {
   return (
-    <li className="relative pb-12 pl-8 last:pb-0">
+    <li data-reveal="up" className="relative pb-12 pl-8 last:pb-0">
       <span
         aria-hidden="true"
         className="absolute top-2 left-0 size-3 -translate-x-1/2 rounded-full bg-accent"
@@ -43,10 +43,17 @@ export function TimelineItem({
 
 export function Timeline({ items }: { items: TimelineItemData[] }) {
   return (
-    <ol className="ml-1.5 border-l-2 border-border">
-      {items.map((item) => (
-        <TimelineItem key={item.id} {...item} />
-      ))}
-    </ol>
+    <div data-timeline className="relative ml-1.5">
+      <span
+        aria-hidden="true"
+        data-timeline-progress
+        className="absolute top-0 -left-0.5 h-full w-0.5 origin-top bg-accent"
+      />
+      <ol className="border-l-2 border-border">
+        {items.map((item) => (
+          <TimelineItem key={item.id} {...item} />
+        ))}
+      </ol>
+    </div>
   );
 }

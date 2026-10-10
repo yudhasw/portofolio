@@ -3,7 +3,7 @@
 import { useId, useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
 import type { Locale } from "@/i18n/routing";
-import { contactSchema, type ContactErrorKey } from "@/lib/validation/contact";
+import type { ContactErrorKey } from "@/lib/validation/contact";
 
 type Labels = {
   name: string;
@@ -40,6 +40,8 @@ export function ContactForm({
       string
     >;
 
+    // zod dimuat saat dibutuhkan agar tidak masuk bundle awal.
+    const { contactSchema } = await import("@/lib/validation/contact");
     const parsed = contactSchema.safeParse(data);
     if (!parsed.success) {
       const next: Partial<Record<Field, ContactErrorKey>> = {};

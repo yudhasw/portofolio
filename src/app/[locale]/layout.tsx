@@ -3,6 +3,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { notFound } from "next/navigation";
+import { MotionController } from "@/components/motion/MotionController";
 import { Footer } from "@/components/layout/Footer";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { Navbar } from "@/components/layout/Navbar";
@@ -46,6 +47,13 @@ export async function generateMetadata({
     metadataBase: new URL(siteUrl),
     title: t("title"),
     description: t("description"),
+    openGraph: {
+      type: "website",
+      siteName: "Yudha Setiawan Wicaksono",
+      locale: locale === "id" ? "id_ID" : "en_US",
+      url: `/${locale}`,
+    },
+    twitter: { card: "summary_large_image" },
     alternates: {
       canonical: `/${locale}`,
       languages: { en: "/en", id: "/id", "x-default": "/en" },
@@ -78,8 +86,8 @@ export default async function LocaleLayout({
   );
 
   const languageLabels = {
-    en: language("label", { language: language("en") }),
-    id: language("label", { language: language("id") }),
+    en: language("label", { code: "EN", language: language("en") }),
+    id: language("label", { code: "ID", language: language("id") }),
   };
 
   return (
@@ -95,6 +103,13 @@ export default async function LocaleLayout({
           enableSystem
         >
           <NextIntlClientProvider messages={{}}>
+            <div
+              id="scroll-progress"
+              aria-hidden="true"
+              className="fixed inset-x-0 top-0 z-[70] h-0.5 origin-left bg-accent"
+              style={{ transform: "scaleX(0)" }}
+            />
+            <MotionController />
             <SkipLink targetId="main" label={common("skipToContent")} />
             <Navbar
               locale={locale}

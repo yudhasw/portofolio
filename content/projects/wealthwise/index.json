@@ -7,16 +7,8 @@
   "status": "live",
   "featured": true,
   "order": 1,
-  "tags": [
-    "AI",
-    "Web"
-  ],
-  "stack": [
-    "Laravel",
-    "React",
-    "Tailwind",
-    "Groq LLM API"
-  ],
+  "tags": ["AI", "Web"],
+  "stack": ["Laravel", "React", "Tailwind", "Groq LLM API"],
   "gallery": [
     {
       "image": "/images/projects/wealthwise/wealthwise-health.jpg",

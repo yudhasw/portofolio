@@ -19,6 +19,13 @@ export type ProjectCardData = {
   featured?: boolean;
 };
 
+type CardProps = ProjectCardData & {
+  /** Level heading judul kartu, mengikuti hierarki halaman. */
+  headingLevel?: 2 | 3 | 4;
+  /** Muat cover lebih awal (untuk kartu yang terlihat di layar pertama). */
+  priority?: boolean;
+};
+
 const marker = {
   live: "dot",
   "in-development": "ring",
@@ -35,12 +42,16 @@ export function ProjectCard({
   caseStudy,
   links,
   featured,
-}: ProjectCardData) {
+  headingLevel = 3,
+  priority,
+}: CardProps) {
+  const Heading = `h${headingLevel}` as const;
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-md border border-border bg-surface">
+    <article className="flex h-full flex-col overflow-hidden rounded-md border border-border bg-surface transition-transform duration-(--duration-base) ease-(--ease) focus-within:-translate-y-1 hover:-translate-y-1 motion-reduce:transform-none">
       {cover && (
         <Image
           src={cover.src}
+          priority={priority}
           alt={cover.alt}
           width={cover.width}
           height={cover.height}
@@ -54,11 +65,11 @@ export function ProjectCard({
         <div className="mb-3">
           <Badge marker={marker[status]}>{statusLabel}</Badge>
         </div>
-        <h3
+        <Heading
           className={`font-display font-bold ${featured ? "text-2xl" : "text-lg"}`}
         >
           {title}
-        </h3>
+        </Heading>
         <p className="mt-2 flex-1 text-fg-muted">{summary}</p>
         <ul className="mt-4 flex flex-wrap gap-2">
           {stack.map((s) => (

@@ -26,7 +26,7 @@ export function Contact({
     <Section id="contact">
       <SectionHeading id="contact" eyebrow={eyebrow} title={title} />
       <div className="grid gap-12 md:grid-cols-2">
-        <div>
+        <div data-reveal="up">
           <p className="text-lg text-fg-muted">{intro}</p>
           <dl className="mt-8 space-y-4">
             <div>

@@ -20,6 +20,8 @@ import {
   pick,
 } from "@/lib/content";
 import { toCardData } from "@/lib/content/cards";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getSiteUrl } from "@/lib/seo/site-url";
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale: raw } = await params;
@@ -68,8 +70,20 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   };
   const cards = allProjects.map((p) => toCardData(p, locale, cardLabels));
 
+  const person = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: site.name,
+    jobTitle: "Software Engineer",
+    url: `${getSiteUrl()}/${locale}`,
+    sameAs: [site.github, site.linkedin],
+    alumniOf: { "@type": "CollegeOrUniversity", name: "Telkom University" },
+    knowsAbout: skillGroups.flatMap((g) => g.items),
+  };
+
   return (
     <>
+      <JsonLd data={person} />
       <Hero
         name={site.name}
         eyebrow={hero("eyebrow")}

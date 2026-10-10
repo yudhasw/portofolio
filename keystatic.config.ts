@@ -1,4 +1,5 @@
 import { collection, config, fields, singleton } from "@keystatic/core";
+import { block } from "@keystatic/core/content-components";
 import {
   localized,
   requiredMultiline,
@@ -240,8 +241,30 @@ export default config({
             itemLabel: (props) => props.fields.value.fields.en.value,
           },
         ),
-        bodyEn: fields.mdx({ label: "Studi kasus (EN)", extension: "mdx" }),
-        bodyId: fields.mdx({ label: "Studi kasus (ID)", extension: "mdx" }),
+        bodyEn: fields.mdx({
+          label: "Studi kasus (EN)",
+          extension: "mdx",
+          components: {
+            Flow: block({
+              label: "Diagram alur",
+              schema: {
+                steps: fields.text({ label: "Langkah, dipisah dengan |" }),
+              },
+            }),
+          },
+        }),
+        bodyId: fields.mdx({
+          label: "Studi kasus (ID)",
+          extension: "mdx",
+          components: {
+            Flow: block({
+              label: "Diagram alur",
+              schema: {
+                steps: fields.text({ label: "Langkah, dipisah dengan |" }),
+              },
+            }),
+          },
+        }),
       },
     }),
   },

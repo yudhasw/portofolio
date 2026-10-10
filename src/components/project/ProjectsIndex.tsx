@@ -61,7 +61,13 @@ export function ProjectsIndex({
           </button>
         ))}
       </div>
-      <ProjectGrid projects={projects} columns={3} activeTag={activeTag} />
+      <ProjectGrid
+        projects={projects}
+        columns={3}
+        activeTag={activeTag}
+        headingLevel={2}
+        priorityFirst
+      />
       <p role="status" className="mt-6 text-sm text-fg-muted">
         {count === 0 ? emptyLabel : ""}
       </p>

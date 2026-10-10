@@ -25,7 +25,7 @@ export function About({
     <Section id="about">
       <SectionHeading id="about" eyebrow={eyebrow} title={title} />
       <div className="grid gap-12 md:grid-cols-2">
-        <div className="space-y-4 text-lg">
+        <div data-reveal="up" className="space-y-4 text-lg">
           {bio.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
@@ -38,7 +38,7 @@ export function About({
             ))}
           </ul>
         </div>
-        <div>
+        <div data-reveal="up">
           <h3 className="mb-4 font-display text-xl font-bold">{skillsLabel}</h3>
           <dl className="space-y-5">
             {skillGroups.map((group) => (

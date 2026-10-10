@@ -1,5 +1,9 @@
-/** Diagram alur sederhana untuk dipakai di dalam MDX: <Flow steps={["A", "B"]} /> */
-export function Flow({ steps }: { steps: string[] }) {
+/** Diagram alur untuk MDX: <Flow steps="A | B | C" /> */
+export function Flow({ steps: raw }: { steps: string }) {
+  const steps = raw
+    .split("|")
+    .map((s) => s.trim())
+    .filter(Boolean);
   return (
     <ol className="not-prose my-6 flex flex-wrap items-center gap-2">
       {steps.map((step, i) => (
