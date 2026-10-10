@@ -1,0 +1,54 @@
+/* Design tokens. Satu-satunya tempat nilai mentah warna/spasi/gerak didefinisikan. */
+
+:root {
+  /* Warna: terang */
+  --bg: #fafaf7;
+  --surface: #f0efec;
+  --fg: #1b2422;
+  --fg-muted: #4a5552;
+  --accent: #2f4f4b;
+  --on-accent: #ffffff;
+  --border: #d9d8d3;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  /* Gerak */
+  --duration-fast: 150ms;
+  --duration-base: 400ms;
+  --duration-slow: 700ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  color-scheme: light;
+}
+
+/* Warna: gelap. Eksplisit via next-themes... */
+:root[data-theme="dark"] {
+  --bg: #0f1514;
+  --surface: #172120;
+  --fg: #e8eeec;
+  --fg-muted: #a3b2ae;
+  --accent: #6fcfb8;
+  --on-accent: #0f1514;
+  --border: #2a3836;
+
+  color-scheme: dark;
+}
+
+/* ...dan mengikuti sistem sebelum/tanpa JS (belum ada data-theme). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0f1514;
+    --surface: #172120;
+    --fg: #e8eeec;
+    --fg-muted: #a3b2ae;
+    --accent: #6fcfb8;
+    --on-accent: #0f1514;
+    --border: #2a3836;
+
+    color-scheme: dark;
+  }
+}
