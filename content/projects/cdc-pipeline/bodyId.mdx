@@ -10,9 +10,9 @@ Pipeline Change Data Capture berbasis log menggantikan batch harian. Perubahan d
 
 Greenplum 6 tidak punya upsert native dan schema auto-evolution, sehingga job merge dengan Python menangani hal yang tidak bisa dilakukan sink:
 
-- deduplikasi berdasarkan ID
-- penyaringan event yang datang tidak berurutan
-- penggabungan operasi delete dan insert
+* deduplikasi berdasarkan ID
+* penyaringan event yang datang tidak berurutan
+* penggabungan operasi delete dan insert
 
 ## Validasi
 

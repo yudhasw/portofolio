@@ -29,17 +29,41 @@
     "id": "Bahasa Indonesia"
   },
   "Hero": {
-    "eyebrow": "Software Engineer",
-    "openToWork": "Terbuka untuk pekerjaan",
-    "ctaProjects": "Lihat proyek",
+    "eyebrow": "Software & AI Engineer",
+    "openToWork": "Terbuka untuk pekerjaan & freelance",
+    "ctaProjects": "Jelajahi karya",
     "ctaContact": "Hubungi saya",
-    "downloadCv": "Unduh CV"
+    "downloadCv": "Unduh CV",
+    "scroll": "Gulir untuk menjelajah",
+    "consoleTitle": "Terminal Interaktif",
+    "consolePrompt": "Tanyakan apa saja tentang Yudha...",
+    "consolePlaceholder": "Tanya tentang proyek, teknologi, atau latar belakang...",
+    "chips": {
+      "ai": "WealthWise (AI)",
+      "cdc": "Pipeline CDC",
+      "stack": "Teknologi",
+      "experience": "Pengalaman",
+      "contact": "Ketersediaan Kerja"
+    }
   },
   "About": {
     "eyebrow": "Tentang",
     "title": "Membangun produk dengan AI dan data",
     "highlights": "Sorotan",
-    "skills": "Keahlian"
+    "skills": "Keahlian",
+    "bento": {
+      "role": "Software & AI Engineer",
+      "hoverToRead": "Arahkan kursor untuk melihat detail",
+      "craft": "Keahlian",
+      "craftDesc": "Membangun aplikasi web bertenaga AI dan pipeline data berkinerja tinggi.",
+      "basedIn": "Berbasis di",
+      "location": "Bandung, Indonesia",
+      "coords": "6.9744° S, 107.6303° E",
+      "gmt": "GMT+7",
+      "mindset": "Filosofi Rekayasa",
+      "mindsetDesc": "Menjembatani riset computer vision & LLM ke dalam aplikasi yang bersih, andal, dan nyata.",
+      "status": "Terbuka untuk peluang kerja & freelance"
+    }
   },
   "Experience": {
     "eyebrow": "Pengalaman",

@@ -27,8 +27,10 @@ export function LanguageSwitcher({ currentLocale, labels }: Props) {
               hrefLang={locale}
               aria-label={labels[locale]}
               aria-current={active ? "true" : undefined}
-              className={`inline-flex h-10 min-w-10 items-center justify-center rounded-pill px-2 text-sm font-medium uppercase transition-colors duration-(--duration-fast) ${
-                active ? "bg-accent text-on-accent" : "text-fg hover:bg-surface"
+              className={`inline-flex h-8 items-center justify-center rounded-full px-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
+                active
+                  ? "bg-accent text-on-accent shadow-sm"
+                  : "text-fg-muted hover:bg-surface/60 hover:text-fg"
               }`}
             >
               {locale}

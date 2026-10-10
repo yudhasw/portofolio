@@ -10,9 +10,9 @@ A log-based Change Data Capture pipeline replaces the daily batch. Changes are r
 
 Greenplum 6 has no native upsert and no schema auto-evolution, so a Python merge job handles what the sink cannot:
 
-- deduplication by ID
-- filtering of out-of-order events
-- merging of delete and insert operations
+* deduplication by ID
+* filtering of out-of-order events
+* merging of delete and insert operations
 
 ## Validation
 

@@ -101,6 +101,20 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         secondaryCta={{ label: hero("ctaContact"), href: "#contact" }}
         cv={cv ? { label: hero("downloadCv"), href: cv } : undefined}
         status={site.openToWork ? hero("openToWork") : undefined}
+        locale={locale}
+        scrollLabel={hero("scroll")}
+        consoleLabels={{
+          title: hero("consoleTitle"),
+          prompt: hero("consolePrompt"),
+          placeholder: hero("consolePlaceholder"),
+          chips: {
+            ai: hero("chips.ai"),
+            cdc: hero("chips.cdc"),
+            stack: hero("chips.stack"),
+            experience: hero("chips.experience"),
+            contact: hero("chips.contact"),
+          },
+        }}
       />
       <About
         eyebrow={about("eyebrow")}
@@ -116,6 +130,19 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           title: pick(g.title, locale, `skill:${g.id}`),
           items: g.items,
         }))}
+        bentoLabels={{
+          role: about("bento.role"),
+          hoverToRead: about("bento.hoverToRead"),
+          craft: about("bento.craft"),
+          craftDesc: about("bento.craftDesc"),
+          basedIn: about("bento.basedIn"),
+          location: about("bento.location"),
+          coords: about("bento.coords"),
+          gmt: about("bento.gmt"),
+          mindset: about("bento.mindset"),
+          mindsetDesc: about("bento.mindsetDesc"),
+          status: about("bento.status"),
+        }}
       />
       <Experience
         eyebrow={experience("eyebrow")}

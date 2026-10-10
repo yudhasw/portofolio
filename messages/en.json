@@ -29,17 +29,41 @@
     "id": "Bahasa Indonesia"
   },
   "Hero": {
-    "eyebrow": "Software Engineer",
-    "openToWork": "Open to work",
-    "ctaProjects": "View projects",
+    "eyebrow": "Software & AI Engineer",
+    "openToWork": "Open to work & freelance",
+    "ctaProjects": "Explore work",
     "ctaContact": "Get in touch",
-    "downloadCv": "Download CV"
+    "downloadCv": "Download CV",
+    "scroll": "Scroll to explore",
+    "consoleTitle": "Interactive Terminal",
+    "consolePrompt": "Ask me anything about Yudha...",
+    "consolePlaceholder": "Ask about projects, stack, or background...",
+    "chips": {
+      "ai": "WealthWise (AI)",
+      "cdc": "CDC Pipeline",
+      "stack": "Tech Stack",
+      "experience": "Experience",
+      "contact": "Work Availability"
+    }
   },
   "About": {
     "eyebrow": "About",
     "title": "Building products with AI and data",
     "highlights": "Highlights",
-    "skills": "Skills"
+    "skills": "Skills",
+    "bento": {
+      "role": "Software & AI Engineer",
+      "hoverToRead": "Hover to inspect details",
+      "craft": "Craft",
+      "craftDesc": "Building scalable AI-driven web apps and high-throughput data pipelines.",
+      "basedIn": "Based in",
+      "location": "Bandung, Indonesia",
+      "coords": "6.9744° S, 107.6303° E",
+      "gmt": "GMT+7",
+      "mindset": "Engineering Philosophy",
+      "mindsetDesc": "Bridging computer vision & LLM research into clean, reliable, and user-facing software.",
+      "status": "Available for opportunities & freelance"
+    }
   },
   "Experience": {
     "eyebrow": "Experience",

@@ -1,12 +1,12 @@
 {
   "id": "telkom",
   "degree": {
-    "en": "B.Sc. Informatics",
+    "en": "S.Kom.",
     "id": "S1 Informatika"
   },
   "institution": "Telkom University",
   "start": "2023",
   "end": "2027",
-  "order": 1,
-  "gpa": "3.62 (semester 6)"
+  "gpa": "3.62 (semester 6)",
+  "order": 1
 }

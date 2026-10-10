@@ -11,7 +11,7 @@ export function ThemeToggle({ label }: { label: string }) {
       type="button"
       aria-label={label}
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="inline-flex size-10 items-center justify-center rounded-pill text-fg transition-colors duration-(--duration-fast) hover:bg-surface"
+      className="inline-flex size-8 items-center justify-center rounded-full text-fg-muted transition-all duration-300 hover:scale-105 hover:bg-surface/80 hover:text-fg active:scale-95"
     >
       <svg
         aria-hidden="true"

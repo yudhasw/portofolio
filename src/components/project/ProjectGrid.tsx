@@ -28,6 +28,7 @@ export function ProjectGrid({
         <li key={project.slug} data-reveal="up">
           <ProjectCard
             {...project}
+            index={i + 1}
             headingLevel={headingLevel}
             priority={priorityFirst && i === 0}
           />

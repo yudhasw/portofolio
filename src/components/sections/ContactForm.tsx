@@ -77,7 +77,7 @@ export function ContactForm({
     "aria-invalid": errors[field] ? (true as const) : undefined,
     "aria-describedby": errors[field] ? `${uid}-${field}-error` : undefined,
     className:
-      "bg-bg text-fg border-fg-muted w-full rounded-sm border px-4 py-3 aria-[invalid=true]:border-2 aria-[invalid=true]:border-accent",
+      "bg-surface/70 text-fg border border-border/80 w-full rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-200 aria-[invalid=true]:border-2 aria-[invalid=true]:border-accent",
   });
 
   const row = (field: Field, label: string, control: "input" | "textarea") => (
