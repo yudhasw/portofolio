@@ -7,7 +7,8 @@ type GalleryImage = { src: string; alt: string; width: number; height: number };
 
 type Props = {
   images: GalleryImage[];
-  openLabel: (alt: string) => string;
+  /** Templat berisi {alt}, mis. "Enlarge image: {alt}". */
+  openLabel: string;
   closeLabel: string;
 };
 
@@ -32,7 +33,7 @@ export function Gallery({ images, openLabel, closeLabel }: Props) {
             <button
               type="button"
               onClick={() => open(image)}
-              aria-label={openLabel(image.alt)}
+              aria-label={openLabel.replace("{alt}", image.alt)}
               className="block w-full overflow-hidden rounded-md border border-border"
             >
               <Image

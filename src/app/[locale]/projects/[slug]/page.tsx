@@ -145,7 +145,7 @@ export default async function ProjectPage({
           ...g.image,
           alt: pick(g.alt, locale),
         }))}
-        openImageLabel={(alt) => c("openImage", { alt })}
+        openImageLabel={c.raw("openImage") as string}
         closeImageLabel={c("closeImage")}
         prev={prev && { slug: prev.slug, title: prev.title, label: c("prev") }}
         next={next && { slug: next.slug, title: next.title, label: c("next") }}

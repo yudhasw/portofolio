@@ -18,7 +18,7 @@ type Props = {
   body: ReactNode;
   galleryLabel: string;
   gallery: { src: string; alt: string; width: number; height: number }[];
-  openImageLabel: (alt: string) => string;
+  openImageLabel: string;
   closeImageLabel: string;
   prev?: { slug: string; title: string; label: string };
   next?: { slug: string; title: string; label: string };
