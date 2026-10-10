@@ -1,0 +1,41 @@
+{
+  "name": "Yudha Setiawan Wicaksono",
+  "headline": {
+    "en": "Software engineer building AI- and data-driven products",
+    "id": "Software engineer yang membangun produk berbasis AI & data"
+  },
+  "subheadline": {
+    "en": "Informatics student at Telkom University with hands-on experience in web development, data engineering, analytics, and software quality assurance.",
+    "id": "Mahasiswa Informatika Telkom University dengan pengalaman langsung di pengembangan web, data engineering, analitik, dan software quality assurance."
+  },
+  "bio": {
+    "en": [
+      "I am an Informatics student at Telkom University who builds AI- and data-driven software. Through three internships I have worked across web development, data engineering, analytics, and software quality assurance.",
+      "I am looking for software engineering and AI engineering roles where I can keep growing and ship products that people actually use."
+    ],
+    "id": [
+      "Saya mahasiswa Informatika Telkom University yang membangun perangkat lunak berbasis AI dan data. Lewat tiga kali magang, saya terlibat di pengembangan web, data engineering, analitik, dan software quality assurance.",
+      "Saya mencari peran software engineering dan AI engineering untuk terus berkembang dan merilis produk yang benar-benar dipakai orang."
+    ]
+  },
+  "highlights": {
+    "en": [
+      "AI-powered web app with vision AI and an LLM chatbot (WealthWise)",
+      "Log-based Change Data Capture pipeline from PostgreSQL to Greenplum",
+      "QA background: test plans, API testing with Postman, regression testing"
+    ],
+    "id": [
+      "Aplikasi web berbasis AI dengan vision AI dan chatbot LLM (WealthWise)",
+      "Pipeline Change Data Capture berbasis log dari PostgreSQL ke Greenplum",
+      "Latar belakang QA: test plan, pengujian API dengan Postman, regression testing"
+    ]
+  },
+  "photoAlt": {
+    "en": "Portrait of Yudha Setiawan Wicaksono",
+    "id": "Potret Yudha Setiawan Wicaksono"
+  },
+  "email": "yudha.sw2006@gmail.com",
+  "github": "https://github.com/yudhasw",
+  "linkedin": "https://www.linkedin.com/in/yudha-setiawan-wicaksono",
+  "openToWork": true
+}

@@ -1,0 +1,89 @@
+{
+  "Meta": {
+    "title": "Yudha Setiawan Wicaksono · Software Engineer",
+    "description": "Portofolio Yudha Setiawan Wicaksono: software engineer yang membangun produk berbasis AI & data."
+  },
+  "Common": {
+    "skipToContent": "Lewati ke konten",
+    "present": "Sekarang",
+    "notFoundTitle": "Halaman tidak ditemukan",
+    "notFoundBody": "Halaman yang Anda cari tidak ada.",
+    "backHome": "Kembali ke beranda"
+  },
+  "Nav": {
+    "label": "Utama",
+    "about": "Tentang",
+    "experience": "Pengalaman",
+    "projects": "Proyek",
+    "education": "Pendidikan",
+    "contact": "Kontak",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu"
+  },
+  "Theme": { "toggle": "Ganti tema warna" },
+  "Language": {
+    "label": "Ganti bahasa ke {language}",
+    "en": "English",
+    "id": "Bahasa Indonesia"
+  },
+  "Hero": {
+    "eyebrow": "Software Engineer",
+    "openToWork": "Terbuka untuk pekerjaan",
+    "ctaProjects": "Lihat proyek",
+    "ctaContact": "Hubungi saya",
+    "downloadCv": "Unduh CV"
+  },
+  "About": {
+    "eyebrow": "Tentang",
+    "title": "Membangun produk dengan AI dan data",
+    "highlights": "Sorotan",
+    "skills": "Keahlian"
+  },
+  "Experience": {
+    "eyebrow": "Pengalaman",
+    "title": "Tempat saya pernah bekerja"
+  },
+  "Projects": {
+    "eyebrow": "Proyek",
+    "title": "Karya pilihan",
+    "featured": "Unggulan",
+    "others": "Proyek lainnya",
+    "stack": "Teknologi",
+    "repo": "Kode sumber",
+    "demo": "Demo langsung",
+    "status": {
+      "live": "Aktif",
+      "in-development": "Dalam pengembangan",
+      "archived": "Selesai"
+    }
+  },
+  "Education": {
+    "eyebrow": "Pendidikan",
+    "title": "Pendidikan dan pelatihan",
+    "certifications": "Sertifikasi dan pelatihan"
+  },
+  "Contact": {
+    "eyebrow": "Kontak",
+    "title": "Mari berbincang",
+    "intro": "Terbuka untuk peran software engineering dan AI engineering, serta proyek freelance. Kirim pesan atau hubungi langsung.",
+    "emailLabel": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "ContactForm": {
+    "name": "Nama",
+    "email": "Email",
+    "message": "Pesan",
+    "submit": "Kirim pesan",
+    "sending": "Mengirim…",
+    "success": "Terima kasih! Pesan Anda sudah terkirim.",
+    "error": "Maaf, pesan tidak dapat dikirim. Coba lagi atau kirim email langsung.",
+    "errors": {
+      "required": "Kolom ini wajib diisi.",
+      "email": "Masukkan alamat email yang valid.",
+      "tooShort": "Pesan minimal 10 karakter.",
+      "tooLong": "Terlalu panjang."
+    }
+  },
+  "Footer": { "rights": "Hak cipta dilindungi." }
+}

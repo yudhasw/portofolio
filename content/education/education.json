@@ -1,0 +1,33 @@
+{
+  "education": [
+    {
+      "id": "telkom",
+      "degree": { "en": "B.Sc. Informatics", "id": "S1 Informatika" },
+      "institution": "Telkom University",
+      "start": "2023",
+      "end": "2027",
+      "order": 1
+    },
+    {
+      "id": "sman1",
+      "degree": { "en": "Natural Sciences track", "id": "Jurusan IPA" },
+      "institution": "SMAN 1 Balikpapan",
+      "start": "2021",
+      "end": "2023",
+      "order": 2
+    }
+  ],
+  "certifications": [
+    { "title": "Learn AI Fundamentals", "issuer": "Dicoding" },
+    { "title": "Data Analytics", "issuer": "RevoU" },
+    {
+      "title": "Data Analytics Course 2025",
+      "issuer": "SCC HIMASTA-ITS",
+      "year": 2025
+    },
+    {
+      "title": "Microsoft Elevate Training: Azure AI Foundry",
+      "issuer": "Microsoft"
+    }
+  ]
+}

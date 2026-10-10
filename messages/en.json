@@ -1,0 +1,86 @@
+{
+  "Meta": {
+    "title": "Yudha Setiawan Wicaksono · Software Engineer",
+    "description": "Portfolio of Yudha Setiawan Wicaksono: software engineer building AI- and data-driven products."
+  },
+  "Common": {
+    "skipToContent": "Skip to content",
+    "present": "Present",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you are looking for does not exist.",
+    "backHome": "Back to home"
+  },
+  "Nav": {
+    "label": "Main",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Theme": { "toggle": "Toggle color theme" },
+  "Language": {
+    "label": "Switch language to {language}",
+    "en": "English",
+    "id": "Bahasa Indonesia"
+  },
+  "Hero": {
+    "eyebrow": "Software Engineer",
+    "openToWork": "Open to work",
+    "ctaProjects": "View projects",
+    "ctaContact": "Get in touch",
+    "downloadCv": "Download CV"
+  },
+  "About": {
+    "eyebrow": "About",
+    "title": "Building products with AI and data",
+    "highlights": "Highlights",
+    "skills": "Skills"
+  },
+  "Experience": { "eyebrow": "Experience", "title": "Where I have worked" },
+  "Projects": {
+    "eyebrow": "Projects",
+    "title": "Selected work",
+    "featured": "Featured",
+    "others": "Other projects",
+    "stack": "Stack",
+    "repo": "Source code",
+    "demo": "Live demo",
+    "status": {
+      "live": "Live",
+      "in-development": "In development",
+      "archived": "Completed"
+    }
+  },
+  "Education": {
+    "eyebrow": "Education",
+    "title": "Education and training",
+    "certifications": "Certifications and training"
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk",
+    "intro": "Open to software engineering and AI engineering roles, and freelance projects. Send a message or reach out directly.",
+    "emailLabel": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "ContactForm": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Thank you! Your message has been sent.",
+    "error": "Sorry, the message could not be sent. Please try again or email me directly.",
+    "errors": {
+      "required": "This field is required.",
+      "email": "Enter a valid email address.",
+      "tooShort": "Message must be at least 10 characters.",
+      "tooLong": "This is too long."
+    }
+  },
+  "Footer": { "rights": "All rights reserved." }
+}

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "infranexia",
+    "role": { "en": "Data Management Intern", "id": "Magang Data Management" },
+    "organization": "PT Telkom Infrastruktur Indonesia (InfraNexia)",
+    "type": "internship",
+    "start": "2026-07-29",
+    "end": "2026-08-28",
+    "bullets": {
+      "en": [
+        "Designed and implemented a log-based Change Data Capture pipeline (Debezium, Apache Kafka, JDBC Sink Connector) that moves data from PostgreSQL to a Greenplum data warehouse.",
+        "Built a Python merge job to work around Greenplum 6 limitations (no native upsert or schema auto-evolution): deduplication by ID, out-of-order event filtering, and delete/insert merging.",
+        "Measured latency over 185 cycles: median 14.6 s from PostgreSQL to visibility in Greenplum, versus the previous daily batch ETL. It runs as a 15-second micro-batch, not direct streaming."
+      ],
+      "id": [
+        "Merancang dan mengimplementasikan pipeline Change Data Capture berbasis log (Debezium, Apache Kafka, JDBC Sink Connector) yang memindahkan data dari PostgreSQL ke data warehouse Greenplum.",
+        "Membuat job merge dengan Python untuk mengatasi keterbatasan Greenplum 6 (tanpa upsert native dan schema auto-evolution): deduplikasi berdasarkan ID, penyaringan event yang datang tidak berurutan, dan penggabungan delete/insert.",
+        "Mengukur latensi pada 185 siklus: median 14,6 dtk dari PostgreSQL sampai terlihat di Greenplum, dibandingkan batch ETL harian sebelumnya. Berjalan sebagai micro-batch 15 dtk, bukan streaming langsung."
+      ]
+    },
+    "tags": ["Debezium", "Kafka", "PostgreSQL", "Greenplum", "Python"],
+    "order": 1
+  },
+  {
+    "id": "metranet",
+    "role": { "en": "Data Analyst Intern", "id": "Magang Data Analyst" },
+    "organization": "Metranet",
+    "type": "internship",
+    "start": "2026-01",
+    "end": "2026-03",
+    "bullets": {
+      "en": [
+        "Developed data pipelines and monitoring dashboards.",
+        "Automated business processes linking the Sales and Compliance divisions.",
+        "Analyzed and visualized sales data using ETL methods to surface business insights."
+      ],
+      "id": [
+        "Mengembangkan pipeline data dan dashboard monitoring.",
+        "Mengotomatisasi proses bisnis yang menghubungkan divisi Sales dan Compliance.",
+        "Menganalisis dan memvisualisasikan data penjualan dengan metode ETL untuk menghasilkan insight bisnis."
+      ]
+    },
+    "tags": ["ETL", "Dashboard", "Python"],
+    "order": 2
+  },
+  {
+    "id": "ase-lab",
+    "role": {
+      "en": "Software Quality Assurance Intern",
+      "id": "Magang Software Quality Assurance"
+    },
+    "organization": "Advanced Software Engineering Laboratory, Telkom University",
+    "type": "internship",
+    "start": "2025-07",
+    "end": "2025-09",
+    "bullets": {
+      "en": [
+        "Wrote and executed unit and system test cases for team-built web applications.",
+        "Tested APIs with Postman, covering positive and negative cases.",
+        "Identified, reproduced, and documented bugs; coordinated regression testing with developers.",
+        "Maintained QA documentation: test plans, test cases, test reports, and bug lists."
+      ],
+      "id": [
+        "Menulis dan menjalankan test case unit dan sistem untuk aplikasi web yang dibangun tim.",
+        "Menguji API dengan Postman, mencakup kasus positif dan negatif.",
+        "Mengidentifikasi, mereproduksi, dan mendokumentasikan bug; berkoordinasi dengan developer untuk regression testing.",
+        "Memelihara dokumentasi QA: test plan, test case, laporan pengujian, dan daftar bug."
+      ]
+    },
+    "tags": ["Postman", "Test Plan", "Regression Testing"],
+    "order": 3
+  }
+]

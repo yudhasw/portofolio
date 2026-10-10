@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "wealthwise",
+    "title": "WealthWise",
+    "summary": {
+      "en": "AI-powered personal finance web app: receipt scanning with vision AI, budgeting, a financial health score, and a finance chatbot. Team project.",
+      "id": "Aplikasi web keuangan pribadi berbasis AI: pemindaian struk dengan vision AI, anggaran, skor kesehatan finansial, dan chatbot keuangan. Proyek tim."
+    },
+    "status": "live",
+    "featured": true,
+    "order": 1,
+    "tags": ["AI", "Web"],
+    "stack": ["Laravel", "React", "Tailwind", "Groq LLM API"]
+  },
+  {
+    "slug": "cdc-infranexia",
+    "title": "Pipeline CDC InfraNexia",
+    "summary": {
+      "en": "Log-based Change Data Capture pipeline from PostgreSQL to Greenplum. Median 14.6 s until a change is visible in Greenplum, versus a daily batch ETL; 15-second micro-batch, not direct streaming.",
+      "id": "Pipeline Change Data Capture berbasis log dari PostgreSQL ke Greenplum. Median 14,6 dtk sampai perubahan terlihat di Greenplum, dibandingkan batch ETL harian; micro-batch 15 dtk, bukan streaming langsung."
+    },
+    "status": "archived",
+    "featured": true,
+    "order": 2,
+    "tags": ["Data Engineering"],
+    "stack": ["Debezium", "Apache Kafka", "PostgreSQL", "Greenplum", "Python"]
+  },
+  {
+    "slug": "my-neighbor",
+    "title": "My Neighbor",
+    "summary": {
+      "en": "Residential and housing management system. I lead QA: test planning and API testing. Team project.",
+      "id": "Sistem manajemen perumahan dan hunian. Saya memimpin QA: perencanaan pengujian dan pengujian API. Proyek tim."
+    },
+    "status": "in-development",
+    "featured": true,
+    "order": 3,
+    "tags": ["Web", "QA"],
+    "stack": ["Postman"]
+  },
+  {
+    "slug": "telkomedika",
+    "title": "Telkomedika Online Reservation",
+    "summary": {
+      "en": "Online doctor-appointment booking with schedule search and quota calculation. Team project.",
+      "id": "Pemesanan janji dokter online dengan pencarian jadwal dan perhitungan kuota. Proyek tim."
+    },
+    "status": "in-development",
+    "featured": true,
+    "order": 4,
+    "tags": ["Web"],
+    "stack": ["Flask", "Azure SQL"]
+  },
+  {
+    "slug": "e-tokobuku",
+    "title": "E-TokoBuku",
+    "summary": {
+      "en": "Online e-book store with a discussion forum.",
+      "id": "Toko buku elektronik online dengan forum diskusi."
+    },
+    "status": "archived",
+    "featured": false,
+    "order": 5,
+    "tags": ["Web"],
+    "stack": ["Java (JSP/Servlet)", "Azure MySQL"]
+  },
+  {
+    "slug": "pakan-ikan-otomatis",
+    "title": "Pakan Ikan Otomatis",
+    "summary": {
+      "en": "Automatic fish feeder on Arduino Uno with temperature sensing and Telegram remote control.",
+      "id": "Pemberi pakan ikan otomatis berbasis Arduino Uno dengan sensor suhu dan kendali jarak jauh lewat Telegram."
+    },
+    "status": "archived",
+    "featured": false,
+    "order": 6,
+    "tags": ["IoT"],
+    "stack": ["Arduino Uno", "Telegram"]
+  }
+]

@@ -1,0 +1,41 @@
+"use client";
+
+import { Link, usePathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
+
+type Props = {
+  currentLocale: Locale;
+  /** Label aksesibel per bahasa tujuan, mis. { en: "Switch language to English", ... } */
+  labels: Record<Locale, string>;
+};
+
+/** Pindah bahasa di halaman yang sama; scroll tidak direset sehingga posisi terjaga. */
+export function LanguageSwitcher({ currentLocale, labels }: Props) {
+  const pathname = usePathname();
+
+  return (
+    <ul className="flex items-center gap-1">
+      {routing.locales.map((locale) => {
+        const active = locale === currentLocale;
+        return (
+          <li key={locale}>
+            <Link
+              href={pathname}
+              locale={locale}
+              scroll={false}
+              lang={locale}
+              hrefLang={locale}
+              aria-label={labels[locale]}
+              aria-current={active ? "true" : undefined}
+              className={`inline-flex h-10 min-w-10 items-center justify-center rounded-pill px-2 text-sm font-medium uppercase transition-colors duration-(--duration-fast) ${
+                active ? "bg-accent text-on-accent" : "text-fg hover:bg-surface"
+              }`}
+            >
+              {locale}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
