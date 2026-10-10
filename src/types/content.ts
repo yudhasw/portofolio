@@ -7,16 +7,16 @@ export type Site = {
   name: string;
   headline: Localized;
   subheadline: Localized;
-  bio: Localized<string[]>;
-  highlights: Localized<string[]>;
-  /** Path di /public. Kosong = tampilkan placeholder inisial. */
+  bio: Localized[];
+  highlights: Localized[];
+  /** Path publik (mis. /images/yudha.jpg). Kosong = placeholder inisial. */
   photo?: string;
   photoAlt: Localized;
   email: string;
   github: string;
   linkedin: string;
   openToWork: boolean;
-  /** Path di /public. Kosong = tombol CV disembunyikan. */
+  /** Path publik. Kosong = tombol CV disembunyikan. */
   cvEn?: string;
   cvId?: string;
 };
@@ -29,7 +29,7 @@ export type Experience = {
   /** "YYYY-MM" atau "YYYY-MM-DD" */
   start: string;
   end?: string;
-  bullets: Localized<string[]>;
+  bullets: Localized[];
   tags: string[];
   order: number;
 };
@@ -41,7 +41,6 @@ export type Education = {
   start: string;
   end: string;
   gpa?: string;
-  note?: Localized;
   order: number;
 };
 
@@ -50,6 +49,7 @@ export type Certification = {
   issuer: string;
   year?: number;
   url?: string;
+  order: number;
 };
 
 export type SkillGroup = {
@@ -61,9 +61,18 @@ export type SkillGroup = {
 
 export type ProjectStatus = "live" | "in-development" | "archived";
 
+export type ProjectImage = { src: string; width: number; height: number };
+
+export type ProjectMetric = {
+  label: Localized;
+  value: Localized;
+  note: Localized;
+};
+
 export type Project = {
   slug: string;
   title: string;
+  published: boolean;
   summary: Localized;
   status: ProjectStatus;
   featured: boolean;
@@ -71,6 +80,11 @@ export type Project = {
   year?: number;
   tags: string[];
   stack: string[];
+  cover?: ProjectImage;
+  coverAlt: Localized;
+  gallery: { image: ProjectImage; alt: Localized }[];
   repoUrl?: string;
   demoUrl?: string;
+  metrics: ProjectMetric[];
+  hasBody: Localized<boolean>;
 };

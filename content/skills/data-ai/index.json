@@ -1,0 +1,15 @@
+{
+  "id": "data-ai",
+  "title": {
+    "en": "Data & AI",
+    "id": "Data & AI"
+  },
+  "items": [
+    "Python (scraping, analysis, visualization)",
+    "ETL",
+    "Change Data Capture (Debezium, Kafka)",
+    "Greenplum",
+    "LLM and vision API integration"
+  ],
+  "order": 3
+}

@@ -1,0 +1,11 @@
+{
+  "id": "telkom",
+  "degree": {
+    "en": "B.Sc. Informatics",
+    "id": "S1 Informatika"
+  },
+  "institution": "Telkom University",
+  "start": "2023",
+  "end": "2027",
+  "order": 1
+}

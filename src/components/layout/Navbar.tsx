@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 
 type Item = { id: string; label: string };
@@ -19,7 +20,6 @@ type Props = {
 };
 
 export function Navbar({
-  locale,
   items,
   activeId,
   brand,
@@ -64,21 +64,21 @@ export function Navbar({
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg/90 backdrop-blur">
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between gap-4 px-5 sm:px-8">
-        <a href={`/${locale}`} className="font-display text-lg font-bold">
+        <Link href="/" className="font-display text-lg font-bold">
           {brand}
-        </a>
+        </Link>
 
         <nav aria-label={navLabel} className="hidden md:block">
           <ul className="flex items-center gap-1">
             {items.map((item) => (
               <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
+                <Link
+                  href={`/#${item.id}`}
                   aria-current={active === item.id ? "location" : undefined}
                   className={linkClass(item.id)}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -122,14 +122,14 @@ export function Navbar({
           <ul className="mx-auto max-w-5xl px-5 py-2 sm:px-8">
             {items.map((item) => (
               <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
+                <Link
+                  href={`/#${item.id}`}
                   onClick={() => setOpen(false)}
                   aria-current={active === item.id ? "location" : undefined}
                   className={`${linkClass(item.id)} py-3`}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

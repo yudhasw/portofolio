@@ -1,0 +1,15 @@
+{
+  "published": true,
+  "summary": {
+    "en": "Online e-book store with a discussion forum.",
+    "id": "Toko buku elektronik online dengan forum diskusi."
+  },
+  "status": "archived",
+  "featured": false,
+  "order": 5,
+  "tags": ["Web"],
+  "stack": ["Java (JSP/Servlet)", "Azure MySQL"],
+  "gallery": [],
+  "metrics": [],
+  "title": "E-TokoBuku"
+}

@@ -20,7 +20,9 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
-  "Theme": { "toggle": "Toggle color theme" },
+  "Theme": {
+    "toggle": "Toggle color theme"
+  },
   "Language": {
     "label": "Switch language to {language}",
     "en": "English",
@@ -39,7 +41,10 @@
     "highlights": "Highlights",
     "skills": "Skills"
   },
-  "Experience": { "eyebrow": "Experience", "title": "Where I have worked" },
+  "Experience": {
+    "eyebrow": "Experience",
+    "title": "Where I have worked"
+  },
   "Projects": {
     "eyebrow": "Projects",
     "title": "Selected work",
@@ -52,7 +57,14 @@
       "live": "Live",
       "in-development": "In development",
       "archived": "Completed"
-    }
+    },
+    "viewAll": "View all projects",
+    "caseStudy": "Read case study",
+    "indexTitle": "All projects",
+    "indexIntro": "Everything I have built, from team projects to personal experiments.",
+    "filterLabel": "Filter projects by tag",
+    "filterAll": "All",
+    "empty": "No projects match this tag."
   },
   "Education": {
     "eyebrow": "Education",
@@ -82,5 +94,20 @@
       "tooLong": "This is too long."
     }
   },
-  "Footer": { "rights": "All rights reserved." }
+  "Footer": {
+    "rights": "All rights reserved."
+  },
+  "CaseStudy": {
+    "breadcrumb": "Breadcrumb",
+    "home": "Home",
+    "back": "All projects",
+    "metrics": "Key numbers",
+    "gallery": "Gallery",
+    "openImage": "Enlarge image: {alt}",
+    "closeImage": "Close image",
+    "prev": "Previous project",
+    "next": "Next project",
+    "stack": "Stack",
+    "links": "Links"
+  }
 }

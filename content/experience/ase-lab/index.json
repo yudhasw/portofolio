@@ -1,0 +1,31 @@
+{
+  "id": "ase-lab",
+  "role": {
+    "en": "Software Quality Assurance Intern",
+    "id": "Magang Software Quality Assurance"
+  },
+  "organization": "Advanced Software Engineering Laboratory, Telkom University",
+  "type": "internship",
+  "start": "2025-07",
+  "end": "2025-09",
+  "bullets": [
+    {
+      "en": "Wrote and executed unit and system test cases for team-built web applications.",
+      "id": "Menulis dan menjalankan test case unit dan sistem untuk aplikasi web yang dibangun tim."
+    },
+    {
+      "en": "Tested APIs with Postman, covering positive and negative cases.",
+      "id": "Menguji API dengan Postman, mencakup kasus positif dan negatif."
+    },
+    {
+      "en": "Identified, reproduced, and documented bugs; coordinated regression testing with developers.",
+      "id": "Mengidentifikasi, mereproduksi, dan mendokumentasikan bug; berkoordinasi dengan developer untuk regression testing."
+    },
+    {
+      "en": "Maintained QA documentation: test plans, test cases, test reports, and bug lists.",
+      "id": "Memelihara dokumentasi QA: test plan, test case, laporan pengujian, dan daftar bug."
+    }
+  ],
+  "tags": ["Postman", "Test Plan", "Regression Testing"],
+  "order": 3
+}

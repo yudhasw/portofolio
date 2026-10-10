@@ -1,0 +1,31 @@
+## Problem
+
+Data from an employee leave system reached the data warehouse through a daily batch ETL, so the warehouse was always up to a day behind the source database.
+
+## Approach
+
+A log-based Change Data Capture pipeline replaces the daily batch. Changes are read from the PostgreSQL log, carried through Kafka, and written into Greenplum.
+
+<Flow
+  steps={[
+    "PostgreSQL",
+    "Debezium",
+    "Apache Kafka",
+    "JDBC Sink Connector",
+    "Greenplum",
+  ]}
+/>
+
+Greenplum 6 has no native upsert and no schema auto-evolution, so a Python merge job handles what the sink cannot:
+
+- deduplication by ID
+- filtering of out-of-order events
+- merging of delete and insert operations
+
+## Validation
+
+I tested inserts, updates, deletes, rapid consecutive updates, and the automatic detection of new tables and columns.
+
+## Result
+
+Latency was measured over 185 cycles. The median is 14.6 seconds from a change in PostgreSQL until it is visible in Greenplum, compared with the previous daily batch ETL. The pipeline runs as a 15-second micro-batch, not direct streaming.

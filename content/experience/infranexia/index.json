@@ -1,0 +1,27 @@
+{
+  "id": "infranexia",
+  "role": {
+    "en": "Data Management Intern",
+    "id": "Magang Data Management"
+  },
+  "organization": "PT Telkom Infrastruktur Indonesia (InfraNexia)",
+  "type": "internship",
+  "start": "2026-07-29",
+  "end": "2026-08-28",
+  "bullets": [
+    {
+      "en": "Designed and implemented a log-based Change Data Capture pipeline (Debezium, Apache Kafka, JDBC Sink Connector) that moves data from PostgreSQL to a Greenplum data warehouse.",
+      "id": "Merancang dan mengimplementasikan pipeline Change Data Capture berbasis log (Debezium, Apache Kafka, JDBC Sink Connector) yang memindahkan data dari PostgreSQL ke data warehouse Greenplum."
+    },
+    {
+      "en": "Built a Python merge job to work around Greenplum 6 limitations (no native upsert or schema auto-evolution): deduplication by ID, out-of-order event filtering, and delete/insert merging.",
+      "id": "Membuat job merge dengan Python untuk mengatasi keterbatasan Greenplum 6 (tanpa upsert native dan schema auto-evolution): deduplikasi berdasarkan ID, penyaringan event yang datang tidak berurutan, dan penggabungan delete/insert."
+    },
+    {
+      "en": "Measured latency over 185 cycles: median 14.6 s from PostgreSQL to visibility in Greenplum, versus the previous daily batch ETL. It runs as a 15-second micro-batch, not direct streaming.",
+      "id": "Mengukur latensi pada 185 siklus: median 14,6 dtk dari PostgreSQL sampai terlihat di Greenplum, dibandingkan batch ETL harian sebelumnya. Berjalan sebagai micro-batch 15 dtk, bukan streaming langsung."
+    }
+  ],
+  "tags": ["Debezium", "Kafka", "PostgreSQL", "Greenplum", "Python"],
+  "order": 1
+}

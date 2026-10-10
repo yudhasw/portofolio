@@ -1,0 +1,72 @@
+{
+  "published": false,
+  "summary": {
+    "en": "Log-based Change Data Capture pipeline from PostgreSQL to Greenplum. Median 14.6 s until a change is visible in Greenplum, versus a daily batch ETL; 15-second micro-batch, not direct streaming.",
+    "id": "Pipeline Change Data Capture berbasis log dari PostgreSQL ke Greenplum. Median 14,6 dtk sampai perubahan terlihat di Greenplum, dibandingkan batch ETL harian; micro-batch 15 dtk, bukan streaming langsung."
+  },
+  "status": "archived",
+  "featured": true,
+  "order": 2,
+  "tags": ["Data Engineering"],
+  "stack": ["Debezium", "Apache Kafka", "PostgreSQL", "Greenplum", "Python"],
+  "gallery": [],
+  "metrics": [
+    {
+      "label": {
+        "en": "Median latency",
+        "id": "Latensi median"
+      },
+      "value": {
+        "en": "14.6 s",
+        "id": "14,6 dtk"
+      },
+      "note": {
+        "en": "From PostgreSQL until visible in Greenplum, versus the previous daily batch ETL",
+        "id": "Dari PostgreSQL sampai terlihat di Greenplum, dibandingkan batch ETL harian sebelumnya"
+      }
+    },
+    {
+      "label": {
+        "en": "Measurement cycles",
+        "id": "Siklus pengukuran"
+      },
+      "value": {
+        "en": "185",
+        "id": "185"
+      },
+      "note": {
+        "en": "",
+        "id": ""
+      }
+    },
+    {
+      "label": {
+        "en": "Cycles under 60 s",
+        "id": "Siklus di bawah 60 dtk"
+      },
+      "value": {
+        "en": "86%",
+        "id": "86%"
+      },
+      "note": {
+        "en": "",
+        "id": ""
+      }
+    },
+    {
+      "label": {
+        "en": "Micro-batch interval",
+        "id": "Interval micro-batch"
+      },
+      "value": {
+        "en": "15 s",
+        "id": "15 dtk"
+      },
+      "note": {
+        "en": "Micro-batch, not direct streaming",
+        "id": "Micro-batch, bukan streaming langsung"
+      }
+    }
+  ],
+  "title": "Pipeline CDC InfraNexia"
+}

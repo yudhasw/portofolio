@@ -1,7 +1,6 @@
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import type { ProjectCardData } from "@/components/project/ProjectCard";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { Education } from "@/components/sections/Education";
@@ -20,6 +19,7 @@ import {
   getSkillGroups,
   pick,
 } from "@/lib/content";
+import { toCardData } from "@/lib/content/cards";
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale: raw } = await params;
@@ -41,26 +41,32 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       ].map((namespace) => getTranslations({ locale, namespace })),
     );
 
-  const site = getSite();
+  const [
+    site,
+    experienceItems,
+    educationItems,
+    certifications,
+    skillGroups,
+    allProjects,
+  ] = await Promise.all([
+    getSite(),
+    getExperience(),
+    getEducation(),
+    getCertifications(),
+    getSkillGroups(),
+    getProjects(),
+  ]);
+
   const present = common("present");
   const cv = locale === "id" ? site.cvId : site.cvEn;
-
-  const toCard = (
-    p: ReturnType<typeof getProjects>[number],
-  ): ProjectCardData => ({
-    slug: p.slug,
-    title: p.title,
-    summary: pick(p.summary, locale, `project:${p.slug}`),
-    tags: p.tags,
-    stack: p.stack,
-    status: p.status,
-    statusLabel: projects(`status.${p.status}`),
-    links: [
-      ...(p.demoUrl ? [{ label: projects("demo"), href: p.demoUrl }] : []),
-      ...(p.repoUrl ? [{ label: projects("repo"), href: p.repoUrl }] : []),
-    ],
-  });
-  const allProjects = getProjects();
+  const cardLabels = {
+    status: (s: (typeof allProjects)[number]["status"]) =>
+      projects(`status.${s}`),
+    demo: projects("demo"),
+    repo: projects("repo"),
+    caseStudy: projects("caseStudy"),
+  };
+  const cards = allProjects.map((p) => toCardData(p, locale, cardLabels));
 
   return (
     <>
@@ -85,11 +91,13 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <About
         eyebrow={about("eyebrow")}
         title={about("title")}
-        bio={pick(site.bio, locale, "site.bio")}
+        bio={site.bio.map((p, i) => pick(p, locale, `site.bio[${i}]`))}
         highlightsLabel={about("highlights")}
-        highlights={pick(site.highlights, locale, "site.highlights")}
+        highlights={site.highlights.map((h, i) =>
+          pick(h, locale, `site.highlights[${i}]`),
+        )}
         skillsLabel={about("skills")}
-        skillGroups={getSkillGroups().map((g) => ({
+        skillGroups={skillGroups.map((g) => ({
           id: g.id,
           title: pick(g.title, locale, `skill:${g.id}`),
           items: g.items,
@@ -98,12 +106,14 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <Experience
         eyebrow={experience("eyebrow")}
         title={experience("title")}
-        items={getExperience().map((e) => ({
+        items={experienceItems.map((e) => ({
           id: e.id,
           role: pick(e.role, locale, `experience:${e.id}`),
           organization: e.organization,
           period: formatPeriod(e.start, e.end, locale, present),
-          bullets: pick(e.bullets, locale, `experience:${e.id}.bullets`),
+          bullets: e.bullets.map((b, i) =>
+            pick(b, locale, `experience:${e.id}.bullets[${i}]`),
+          ),
           tags: e.tags,
         }))}
       />
@@ -112,13 +122,14 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         title={projects("title")}
         featuredLabel={projects("featured")}
         othersLabel={projects("others")}
-        featured={allProjects.filter((p) => p.featured).map(toCard)}
-        others={allProjects.filter((p) => !p.featured).map(toCard)}
+        featured={cards.filter((p) => p.featured)}
+        others={cards.filter((p) => !p.featured)}
+        viewAll={{ label: projects("viewAll"), href: "/projects" }}
       />
       <Education
         eyebrow={education("eyebrow")}
         title={education("title")}
-        items={getEducation().map((e) => ({
+        items={educationItems.map((e) => ({
           id: e.id,
           degree: pick(e.degree, locale, `education:${e.id}`),
           institution: e.institution,
@@ -126,7 +137,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           gpa: e.gpa,
         }))}
         certificationsLabel={education("certifications")}
-        certifications={getCertifications()}
+        certifications={certifications}
       />
       <Contact
         eyebrow={contact("eyebrow")}

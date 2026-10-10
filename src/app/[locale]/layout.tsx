@@ -11,6 +11,7 @@ import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { ThemeProvider } from "@/components/theme-provider";
 import { routing } from "@/i18n/routing";
 import { getSite } from "@/lib/content";
+import { getSiteUrl } from "@/lib/seo/site-url";
 import { getCurrentYear } from "@/lib/year";
 import "../globals.css";
 
@@ -28,7 +29,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = getSiteUrl();
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -67,7 +68,7 @@ export default async function LocaleLayout({
     getTranslations({ locale, namespace: "Language" }),
     getTranslations({ locale, namespace: "Footer" }),
   ]);
-  const site = getSite();
+  const site = await getSite();
 
   const items = ["about", "experience", "projects", "education", "contact"].map(
     (id) => ({

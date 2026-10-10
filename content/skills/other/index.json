@@ -1,0 +1,9 @@
+{
+  "id": "other",
+  "title": {
+    "en": "Other",
+    "id": "Lainnya"
+  },
+  "items": ["Docker", "Arduino (Uno, Mega 2560)", "Figma", "Canva"],
+  "order": 6
+}

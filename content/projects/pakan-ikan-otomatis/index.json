@@ -1,0 +1,15 @@
+{
+  "published": true,
+  "summary": {
+    "en": "Automatic fish feeder on Arduino Uno with temperature sensing and Telegram remote control.",
+    "id": "Pemberi pakan ikan otomatis berbasis Arduino Uno dengan sensor suhu dan kendali jarak jauh lewat Telegram."
+  },
+  "status": "archived",
+  "featured": false,
+  "order": 6,
+  "tags": ["IoT"],
+  "stack": ["Arduino Uno", "Telegram"],
+  "gallery": [],
+  "metrics": [],
+  "title": "Pakan Ikan Otomatis"
+}

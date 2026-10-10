@@ -1,0 +1,15 @@
+{
+  "published": true,
+  "summary": {
+    "en": "Residential and housing management system. I lead QA: test planning and API testing. Team project.",
+    "id": "Sistem manajemen perumahan dan hunian. Saya memimpin QA: perencanaan pengujian dan pengujian API. Proyek tim."
+  },
+  "status": "in-development",
+  "featured": true,
+  "order": 3,
+  "tags": ["Web", "QA"],
+  "stack": ["Postman"],
+  "gallery": [],
+  "metrics": [],
+  "title": "My Neighbor"
+}

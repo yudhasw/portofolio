@@ -1,0 +1,31 @@
+## Masalah
+
+Data dari sistem cuti pegawai sampai ke data warehouse lewat batch ETL harian, sehingga warehouse selalu tertinggal hingga sehari dari database sumber.
+
+## Pendekatan
+
+Pipeline Change Data Capture berbasis log menggantikan batch harian. Perubahan dibaca dari log PostgreSQL, dibawa lewat Kafka, lalu ditulis ke Greenplum.
+
+<Flow
+  steps={[
+    "PostgreSQL",
+    "Debezium",
+    "Apache Kafka",
+    "JDBC Sink Connector",
+    "Greenplum",
+  ]}
+/>
+
+Greenplum 6 tidak punya upsert native dan schema auto-evolution, sehingga job merge dengan Python menangani hal yang tidak bisa dilakukan sink:
+
+- deduplikasi berdasarkan ID
+- penyaringan event yang datang tidak berurutan
+- penggabungan operasi delete dan insert
+
+## Validasi
+
+Saya menguji insert, update, delete, update beruntun yang cepat, dan deteksi otomatis tabel serta kolom baru.
+
+## Hasil
+
+Latensi diukur pada 185 siklus. Mediannya 14,6 detik dari perubahan di PostgreSQL sampai terlihat di Greenplum, dibandingkan batch ETL harian sebelumnya. Pipeline berjalan sebagai micro-batch 15 detik, bukan streaming langsung.

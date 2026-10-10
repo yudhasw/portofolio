@@ -1,0 +1,36 @@
+{
+  "published": true,
+  "summary": {
+    "en": "AI-powered personal finance web app: receipt scanning with vision AI, budgeting, a financial health score, and a finance chatbot. Team project.",
+    "id": "Aplikasi web keuangan pribadi berbasis AI: pemindaian struk dengan vision AI, anggaran, skor kesehatan finansial, dan chatbot keuangan. Proyek tim."
+  },
+  "status": "live",
+  "featured": true,
+  "order": 1,
+  "tags": [
+    "AI",
+    "Web"
+  ],
+  "stack": [
+    "Laravel",
+    "React",
+    "Tailwind",
+    "Groq LLM API"
+  ],
+  "gallery": [
+    {
+      "image": "/images/projects/wealthwise/wealthwise-health.jpg",
+      "alt": {
+        "en": "WealthWise Financial Health page: score 80, saving and expense ratios, recommendations, and the AI Planner chatbot",
+        "id": "Halaman Financial Health WealthWise: skor 80, rasio tabungan dan pengeluaran, rekomendasi, dan chatbot AI Planner"
+      }
+    }
+  ],
+  "metrics": [],
+  "title": "WealthWise",
+  "cover": "/images/projects/wealthwise/wealthwise-health.jpg",
+  "coverAlt": {
+    "en": "WealthWise Financial Health page: score 80, saving and expense ratios, recommendations, and the AI Planner chatbot",
+    "id": "Halaman Financial Health WealthWise: skor 80, rasio tabungan dan pengeluaran, rekomendasi, dan chatbot AI Planner"
+  }
+}

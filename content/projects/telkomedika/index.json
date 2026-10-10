@@ -1,0 +1,15 @@
+{
+  "published": true,
+  "summary": {
+    "en": "Online doctor-appointment booking with schedule search and quota calculation. Team project.",
+    "id": "Pemesanan janji dokter online dengan pencarian jadwal dan perhitungan kuota. Proyek tim."
+  },
+  "status": "in-development",
+  "featured": true,
+  "order": 4,
+  "tags": ["Web"],
+  "stack": ["Flask", "Azure SQL"],
+  "gallery": [],
+  "metrics": [],
+  "title": "Telkomedika Online Reservation"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "metranet",
+  "role": {
+    "en": "Data Analyst Intern",
+    "id": "Magang Data Analyst"
+  },
+  "organization": "Metranet",
+  "type": "internship",
+  "start": "2026-01",
+  "end": "2026-03",
+  "bullets": [
+    {
+      "en": "Developed data pipelines and monitoring dashboards.",
+      "id": "Mengembangkan pipeline data dan dashboard monitoring."
+    },
+    {
+      "en": "Automated business processes linking the Sales and Compliance divisions.",
+      "id": "Mengotomatisasi proses bisnis yang menghubungkan divisi Sales dan Compliance."
+    },
+    {
+      "en": "Analyzed and visualized sales data using ETL methods to surface business insights.",
+      "id": "Menganalisis dan memvisualisasikan data penjualan dengan metode ETL untuk menghasilkan insight bisnis."
+    }
+  ],
+  "tags": ["ETL", "Dashboard", "Python"],
+  "order": 2
+}

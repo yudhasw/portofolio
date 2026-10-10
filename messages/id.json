@@ -20,7 +20,9 @@
     "openMenu": "Buka menu",
     "closeMenu": "Tutup menu"
   },
-  "Theme": { "toggle": "Ganti tema warna" },
+  "Theme": {
+    "toggle": "Ganti tema warna"
+  },
   "Language": {
     "label": "Ganti bahasa ke {language}",
     "en": "English",
@@ -55,7 +57,14 @@
       "live": "Aktif",
       "in-development": "Dalam pengembangan",
       "archived": "Selesai"
-    }
+    },
+    "viewAll": "Lihat semua proyek",
+    "caseStudy": "Baca studi kasus",
+    "indexTitle": "Semua proyek",
+    "indexIntro": "Semua yang pernah saya bangun, dari proyek tim sampai eksperimen pribadi.",
+    "filterLabel": "Saring proyek berdasarkan tag",
+    "filterAll": "Semua",
+    "empty": "Tidak ada proyek dengan tag ini."
   },
   "Education": {
     "eyebrow": "Pendidikan",
@@ -85,5 +94,20 @@
       "tooLong": "Terlalu panjang."
     }
   },
-  "Footer": { "rights": "Hak cipta dilindungi." }
+  "Footer": {
+    "rights": "Hak cipta dilindungi."
+  },
+  "CaseStudy": {
+    "breadcrumb": "Navigasi remah roti",
+    "home": "Beranda",
+    "back": "Semua proyek",
+    "metrics": "Angka utama",
+    "gallery": "Galeri",
+    "openImage": "Perbesar gambar: {alt}",
+    "closeImage": "Tutup gambar",
+    "prev": "Proyek sebelumnya",
+    "next": "Proyek berikutnya",
+    "stack": "Teknologi",
+    "links": "Tautan"
+  }
 }

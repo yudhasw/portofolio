@@ -1,0 +1,11 @@
+{
+  "id": "sman1",
+  "degree": {
+    "en": "Natural Sciences track",
+    "id": "Jurusan IPA"
+  },
+  "institution": "SMAN 1 Balikpapan",
+  "start": "2021",
+  "end": "2023",
+  "order": 2
+}

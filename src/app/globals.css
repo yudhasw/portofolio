@@ -61,3 +61,57 @@
     outline-offset: 3px;
   }
 }
+
+/* Isi studi kasus (MDX). Tanpa plugin typography agar bundle tetap kecil. */
+.case-body {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.case-body > * + * {
+  margin-top: 1rem;
+}
+.case-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2.5rem;
+}
+.case-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.case-body ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+.case-body ol:not(.not-prose) {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+.case-body li + li {
+  margin-top: 0.5rem;
+}
+.case-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.case-body code {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 0.125rem 0.375rem;
+  font-size: 0.9em;
+}
+.case-body pre {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  padding: 1rem;
+}
+.case-body pre code {
+  background: none;
+  padding: 0;
+}

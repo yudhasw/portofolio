@@ -1,0 +1,9 @@
+{
+  "id": "frontend",
+  "title": {
+    "en": "Frontend",
+    "id": "Frontend"
+  },
+  "items": ["HTML", "CSS", "JSP", "React"],
+  "order": 2
+}
