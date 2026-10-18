@@ -82,6 +82,11 @@
       "in-development": "Dalam pengembangan",
       "archived": "Selesai"
     },
+    "tabFeatured": "Karya Unggulan",
+    "tabGithub": "Repositori GitHub",
+    "tabAll": "Semua Proyek",
+    "liveGithubHint": "Tersinkron dari github.com/yudhasw",
+    "viewAllGithub": "Jelajahi Semua Repositori di GitHub",
     "viewAll": "Lihat semua proyek",
     "caseStudy": "Baca studi kasus",
     "indexTitle": "Semua proyek",

@@ -18,12 +18,19 @@ type BentoLabels = {
 
 type Props = {
   bio: string[];
+  highlightsLabel: string;
   highlights: string[];
   skillGroups: { id: string; title: string; items: string[] }[];
   labels: BentoLabels;
 };
 
-export function AboutBento({ bio, highlights, skillGroups, labels }: Props) {
+export function AboutBento({
+  bio,
+  highlightsLabel,
+  highlights,
+  skillGroups,
+  labels,
+}: Props) {
   const [activeTab, setActiveTab] = useState<number | null>(null);
 
   // Flattened skills for the marquee
@@ -35,14 +42,14 @@ export function AboutBento({ bio, highlights, skillGroups, labels }: Props) {
   const stackedCards = [
     {
       title: "WealthWise",
-      subtitle: "Vision AI & Finance",
+      subtitle: "AI Engineering",
       text:
         highlights[0] ??
         "AI-powered web app with vision AI for receipt scanning and an LLM finance chatbot.",
-      tag: "Computer Vision · LLM",
+      tag: "Web Development · AI",
     },
     {
-      title: "InfraNexia CDC",
+      title: "CDC Stream",
       subtitle: "Data Engineering",
       text:
         highlights[1] ??
@@ -50,8 +57,8 @@ export function AboutBento({ bio, highlights, skillGroups, labels }: Props) {
       tag: "PostgreSQL · Greenplum",
     },
     {
-      title: "Telkom University",
-      subtitle: "Informatics & QA",
+      title: "ASE Lab",
+      subtitle: "QA Engineering",
       text:
         highlights[2] ??
         "Rigorous QA testing: test plans, API automation with Postman, and regression testing.",
@@ -100,7 +107,7 @@ export function AboutBento({ bio, highlights, skillGroups, labels }: Props) {
         {/* Header badge */}
         <div className="relative z-10 flex items-center justify-between pb-3">
           <span className="text-xs font-bold tracking-wider text-fg uppercase">
-            Featured Highlights
+            {highlightsLabel}
           </span>
           <span className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 font-mono text-[10px] font-semibold tracking-wider text-accent uppercase">
             {labels.hoverToRead}
@@ -117,11 +124,10 @@ export function AboutBento({ bio, highlights, skillGroups, labels }: Props) {
                 onMouseEnter={() => setActiveTab(idx)}
                 onMouseLeave={() => setActiveTab(null)}
                 onClick={() => setActiveTab(activeTab === idx ? null : idx)}
-                className={`relative flex cursor-pointer flex-col justify-between rounded-2xl border p-4 transition-all duration-300 ${
-                  isHovered
-                    ? "-translate-y-2 border-accent bg-surface shadow-xl shadow-accent/10"
-                    : "border-border/60 bg-surface/60 hover:border-accent/40"
-                }`}
+                className={`relative flex cursor-pointer flex-col justify-between rounded-2xl border p-4 transition-all duration-300 ${isHovered
+                  ? "-translate-y-2 border-accent bg-surface shadow-xl shadow-accent/10"
+                  : "border-border/60 bg-surface/60 hover:border-accent/40"
+                  }`}
               >
                 <div className="mb-2 flex items-center justify-between gap-1">
                   <span className="text-xs font-bold tracking-tight text-fg uppercase">
@@ -263,13 +269,13 @@ export function AboutBento({ bio, highlights, skillGroups, labels }: Props) {
         <div className="flex shrink-0 items-center gap-3">
           <div className="flex -space-x-2 overflow-hidden">
             <span className="inline-flex size-9 items-center justify-center rounded-full border-2 border-border bg-surface font-mono text-xs font-bold text-accent">
-              AI
+              SE
             </span>
             <span className="inline-flex size-9 items-center justify-center rounded-full border-2 border-border bg-surface font-mono text-xs font-bold text-accent">
-              CDC
+              DE
             </span>
             <span className="inline-flex size-9 items-center justify-center rounded-full border-2 border-border bg-surface font-mono text-xs font-bold text-accent">
-              QA
+              DS
             </span>
           </div>
         </div>

@@ -26,7 +26,7 @@ const ANSWERS: Record<
     },
     cdc: {
       q: "How did the CDC pipeline work?",
-      a: "At InfraNexia, I engineered a log-based Change Data Capture pipeline transferring data from PostgreSQL to Greenplum with a median end-to-end latency of 14.6 seconds (micro-batch 15s vs legacy daily batch ETL).",
+      a: "At TIF (PT Telkom Infrastruktur Indonesia), I engineered a log-based Change Data Capture pipeline transferring data from PostgreSQL to Greenplum with a median end-to-end latency of 14.6 seconds (micro-batch 15s vs legacy daily batch ETL).",
       tag: "Data Engineering",
     },
     stack: {
@@ -36,7 +36,7 @@ const ANSWERS: Record<
     },
     experience: {
       q: "What is your hands-on experience?",
-      a: "I completed 3 internships: Data Management at InfraNexia (CDC pipeline), Data Analyst at Metranet, and Software QA at Telkom University's Advanced Software Engineering Lab.",
+      a: "I completed 3 internships: Data Management at TIF (CDC pipeline), Data Analyst at Metranet, and Software QA at Telkom University's Advanced Software Engineering Lab.",
       tag: "3 Internships",
     },
     contact: {
@@ -53,7 +53,7 @@ const ANSWERS: Record<
     },
     cdc: {
       q: "Bagaimana cara kerja pipeline CDC?",
-      a: "Di InfraNexia, saya membangun pipeline Change Data Capture berbasis log dari PostgreSQL ke Greenplum dengan latensi median 14,6 detik (micro-batch 15 dtk dibanding ETL harian sebelumnya).",
+      a: "Di TIF (PT Telkom Infrastruktur Indonesia), saya membangun pipeline Change Data Capture berbasis log dari PostgreSQL ke Greenplum dengan latensi median 14,6 detik (micro-batch 15 dtk dibanding ETL harian sebelumnya).",
       tag: "Data Engineering",
     },
     stack: {
@@ -63,7 +63,7 @@ const ANSWERS: Record<
     },
     experience: {
       q: "Apa saja pengalaman kerja Anda?",
-      a: "Saya telah menyelesaikan 3 kali magang: Data Management di InfraNexia (pipeline CDC), Data Analyst di Metranet, dan Software QA di Lab Advanced Software Engineering Telkom University.",
+      a: "Saya telah menyelesaikan 3 kali magang: Data Management di TIF (pipeline CDC), Data Analyst di Metranet, dan Software QA di Lab Advanced Software Engineering Telkom University.",
       tag: "3 Kali Magang",
     },
     contact: {

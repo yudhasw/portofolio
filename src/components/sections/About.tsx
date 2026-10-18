@@ -29,6 +29,7 @@ export function About({
   eyebrow,
   title,
   bio,
+  highlightsLabel,
   highlights,
   skillGroups,
   bentoLabels = {
@@ -52,6 +53,7 @@ export function About({
       <SectionHeading id="about" eyebrow={eyebrow} title={title} />
       <AboutBento
         bio={bio}
+        highlightsLabel={highlightsLabel}
         highlights={highlights}
         skillGroups={skillGroups}
         labels={bentoLabels}

@@ -19,6 +19,7 @@ import {
   getSkillGroups,
   pick,
 } from "@/lib/content";
+import { getGitHubRepos } from "@/lib/github";
 import { toCardData } from "@/lib/content/cards";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getSiteUrl } from "@/lib/seo/site-url";
@@ -50,6 +51,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     certifications,
     skillGroups,
     allProjects,
+    githubRepos,
   ] = await Promise.all([
     getSite(),
     getExperience(),
@@ -57,6 +59,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     getCertifications(),
     getSkillGroups(),
     getProjects(),
+    getGitHubRepos(),
   ]);
 
   const present = common("present");
@@ -165,7 +168,17 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         othersLabel={projects("others")}
         featured={cards.filter((p) => p.featured)}
         others={cards.filter((p) => !p.featured)}
+        githubRepos={githubRepos}
         viewAll={{ label: projects("viewAll"), href: "/projects" }}
+        tabLabels={{
+          tabFeatured: projects("tabFeatured"),
+          tabGithub: projects("tabGithub"),
+          tabAll: projects("tabAll"),
+          liveGithubHint: projects("liveGithubHint"),
+          demo: projects("demo"),
+          source: projects("repo"),
+          viewAllGithub: projects("viewAllGithub"),
+        }}
       />
       <Education
         eyebrow={education("eyebrow")}

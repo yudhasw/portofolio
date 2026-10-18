@@ -82,6 +82,11 @@
       "in-development": "In development",
       "archived": "Completed"
     },
+    "tabFeatured": "Featured Work",
+    "tabGithub": "GitHub Repos",
+    "tabAll": "All Projects",
+    "liveGithubHint": "Mirrored from github.com/yudhasw",
+    "viewAllGithub": "Explore All Repositories on GitHub",
     "viewAll": "View all projects",
     "caseStudy": "Read case study",
     "indexTitle": "All projects",
